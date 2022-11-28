@@ -1,4 +1,4 @@
-const dbConnection = require('../dbConfig');
+const dbConnection = require('../../dbConfig');
 exports.getAllExpenses = (req, res) => {
 	const { id } = req.user;
 	dbConnection.query(

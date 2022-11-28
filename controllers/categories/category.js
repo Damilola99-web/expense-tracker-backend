@@ -1,4 +1,4 @@
-const dbConnection = require('../dbConfig');
+const dbConnection = require('../../dbConfig');
 const uuid = require('uuid');
 
 exports.getAllCategories = async (req, res) => {
