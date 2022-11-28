@@ -12,10 +12,6 @@ const dbConfig = {
 	database : process.env.DATABASE
 };
 
-const dbConnection = mysql.createConnection(
-
-		isProduction ? process.env.DATABASE_URL :
-		dbConfig
-);
+const dbConnection = mysql.createConnection(dbConfig);
 
 module.exports = dbConnection;
