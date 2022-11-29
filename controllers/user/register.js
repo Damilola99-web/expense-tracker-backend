@@ -14,10 +14,10 @@ const register = async (req, res) => {
 	if (!validator.isEmail(email)) {
 		return res.status(400).json({ message: 'Enter a valid email' });
 	}
-	if (!validator.isStrongPassword(password)) {
+	if (password.length < 7) {
 		return res
 			.status(400)
-			.json({ message: 'Enter a very strong password' });
+			.json({ message: 'Password must be at least 6 characters' });
 	}
 
 	const hashedPassword = await bcrypt.hash(password, 10);
