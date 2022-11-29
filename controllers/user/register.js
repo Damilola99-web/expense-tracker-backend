@@ -14,7 +14,7 @@ const register = async (req, res) => {
 	if (!validator.isEmail(email)) {
 		return res.status(400).json({ message: 'Enter a valid email' });
 	}
-	if (password.length < 7) {
+	if (password.length < 6) {
 		return res
 			.status(400)
 			.json({ message: 'Password must be at least 6 characters' });
